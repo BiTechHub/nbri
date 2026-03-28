@@ -1,0 +1,1149 @@
+@extends('frontend.layouts.main')
+@section('content')
+
+
+<style>
+.note {
+position: relative;
+overflow: hidden;
+transition: transform 0.5s;
+}
+
+.note:hover {
+transform: scale(1.05);
+}
+
+/* Custom styles for the image */
+.card-img-top {
+transition: opacity 0.5s;
+}
+
+.note:hover .card-img-top {
+opacity: 0;
+}
+
+/* Custom styles for the list */
+.note ul {
+position: absolute;
+top: 45%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+list-style: none;
+padding: 0;
+width: 270px
+}
+
+.note:hover ul {
+display: block;
+}
+.note ul li:hover a {
+color: #ff8d00;
+}
+.note ul li a {
+color: #000;
+}
+.note li {
+margin: 5px 0;
+}
+/* .card-img-top {
+width: 20% !important;
+} */
+
+.note2 {
+padding: 0.25rem !important;
+}
+a:not([href]):not([tabindex]) {
+color: white !important;
+}
+.tt{
+color: #000;
+text-decoration: none; 
+font-weight: bold; 
+transition: color 0.3s; 
+text-align: center;
+}
+
+
+.pp:hover a{
+color: #000;
+} 
+.scroll {
+height: 230px;
+overflow-x: hidden;
+overflow-y: auto;
+}
+.btn-back{
+background: rgba(248,80,50,1);
+background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(248,80,50,1) 54%, rgba(255,238,0,1) 100%);
+background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(248,80,50,1) 54%, rgba(255,238,0,1) 100%);
+color: #fff;
+}
+.btn-back:hover{
+background: rgba(235,221,29,1);
+background: -webkit-linear-gradient(left, rgba(235,221,29,1) 0%, rgba(255,238,0,1) 0%, rgba(248,80,50,1) 46%, rgba(248,80,50,1) 100%);
+background: linear-gradient(to right, rgba(235,221,29,1) 0%, rgba(255,238,0,1) 0%, rgba(248,80,50,1) 46%, rgba(248,80,50,1) 100%);
+color: #fff;
+}
+.zoom1:hover {
+-ms-transform: scale(1.05);
+-webkit-transform: scale(1.05); 
+transform: scale(1.05);
+}
+
+
+
+.btn2 {
+    text-align: center;
+    font-size:60px;
+    text-transform:uppercase;
+    height:90px;
+    vertical-align: middle;
+    line-height: normal;
+    width:15rem;
+    border:5px solid #9198e5;
+    border-radius: 10px;
+    font-family:Allan;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn2:active {
+    color:aliceblue;
+    transform: scale(0.99,0.99);
+}
+.one {
+    background: linear-gradient(#e66465, #9198e5);
+    transition: all 0.4s;
+    transition-timing-function:cubic-bezier(0.5, 3, 0, 1);
+}
+
+.one:hover {
+    background: linear-gradient(#e66496, #91b8e5);
+    transform: skewX(-15deg);
+}
+
+.two {
+    background: linear-gradient(#64e68b, #e5b091);
+    transition: all 0.4s;
+    transition-timing-function:cubic-bezier(0.5, 3, 0, 1);
+}
+
+.two:hover {
+    background: linear-gradient(#64e6d0, #e5c391);
+    transform: rotatex(20deg) rotateY(20deg);
+}
+
+.three {
+    background: linear-gradient(#b986d6, #88daa1);
+    border:4px solid #e4a13d;
+    transition: all 0.4s;
+    transition-timing-function:cubic-bezier(0.5, 3, 0, 1);
+}
+
+.three:hover {
+    transform:scale(1.2,1.2);
+}
+
+
+
+
+#flexSlider {
+max-height: 369px;
+overflow: hidden; 
+}
+#flexSlider img {
+height: auto; 
+max-height: 290px; 
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  padding:6px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.front h1 {
+    font-size: 19px;
+    background-color: #ffffffe3;
+    margin: 108px 0px;
+    padding: 10px 0px;
+}
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.front {
+    
+    color: #fff;
+    text-align: center;
+    border: 5px solid #fff;
+}
+.front, .back {
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.flip-container, .front, .back {
+    width: 100%;
+    height: 275px;
+    float: left;
+    border-radius: 10px;
+}
+.flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: var(--headingFont);
+    color: #000;
+}
+.back {
+    transform: rotateY(-180deg);
+    background: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 1.4em;
+}
+.back ul li {
+    padding:3px;
+}
+.sidebarbuttonemployee {
+    position: fixed;
+    background-color: #1f39ab;
+  
+    top: 70%;
+    left: -66px;
+    transform: rotate(270deg);
+    color: #fff !important;
+    text-transform: uppercase;
+    padding: 5px 9px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    z-index: 9999;
+    font-size: 16px;
+}
+</style>
+
+
+
+
+<section class="wrapper banner-wrapper">
+    
+    
+<div id="flexSlider" class="flexslider">
+    
+<ul class="slides">
+@foreach($slider as $sliders)
+<li><img src="{{url('/')}}/uploads/{{$sliders->image}}" alt="{{$sliders->heading}}"></li>
+@endforeach
+</ul>
+</div>
+</section>
+<section class="wrapper news-section">
+<div class="carousel-container">
+<div id="flexCarouse2" class="news-section2">
+<div class="notification" style="padding: 12px 20px !important;"><p>Latest Updates</p></div>
+<ul class="slides news-slide">
+@foreach ($news as $newss)
+
+<!--{{ implode(' ', array_slice(str_word_count($newss->subject, 1), 0, 10)) }} @if(str_word_count($newss->subject) > 10)... @endif-->
+<li>
+  <span>
+      @if($newss->type == 'Link')
+    <a href="{{ $newss->file_name }}" target="_blank" class="text-white">{{$newss->subject}}</a>
+    @else
+    <a href="{{ url('/') }}/uploads/news/{{ $newss->file_name }}" target="_blank" class="text-white">{{$newss->subject}} <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+    @endif
+    
+  </span>
+</li>
+@endforeach 
+{{-- <li>
+<span>Description of Latest Updates 4 goes here.</span>
+</li> --}}
+</ul>
+</div>
+</div>
+</section>
+<div class="wrapper" id="skipCont"></div>
+<!--/#skipCont-->
+
+<marquee width="100%" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="background-color:#003530; height:25px;margin-bottom: 25px;color:white;padding-bottom: 29px;">
+<p>Bill Payment, Electricity Supply information is sent to you by the Electricity Department only from the UPPCLT / UPPCLA&nbsp; Header on SMS and from verified green tick account on whatsapp. whatsapp no - PVVNL - 7859804803. Ignore SMS/whatsapp received from any other source/header. Be aware, Be alert</p>
+</marquee>
+
+
+<section id="fontSize" class="wrapper body-wrapper home-btm-slider" style="margin-top:0px;">
+<div class="bg-wrapper top-bg-wrapper gray-bg- padding-top-bott pb-0">
+<div class="container common-container four_content body-container top-body-container padding-top-bott2">
+@if($officer->isNotEmpty())
+<div class="minister clearfix">
+<div class="minister-box clearfix">
+  <div class="row">
+    
+        @foreach ($officer as $officers)
+        <div class="col-md-12">
+          <div class="minister-sub p-0 border" style="padding-right: 20px !important;">
+            <div class="row">
+              <div class="col-3 p-0">
+                <div class="minister-image">
+                  <img src="{{url('/')}}/uploads/{{$officers->image}}" alt="{{$officers->name}}" class="-img-thumbnail img-fluid zoom1" style="width: 80px;height: 80px;"></div></div>
+              <div class="col-9 p-0">
+                <div class="min-info p-0">
+                  <span style="color: #0056b3;font-weight: bold;font-size: 19px;">{{$officers->name}}</span><br>
+                  <span style="color: #ff7c1b;font-weight: 600;">{{$officers->deg}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endforeach
+      
+  </div>
+</div>
+</div>
+@endif
+<div class="left-block" @if($officer->isEmpty()) style="width: 100%;" @endif>
+<div class="row text-center">
+  <div class="col-md-6">
+  <div class="Payment"><!-- Nav tabs -->
+<ul class="nav nav-pills" role="tablist">
+<li role="presentation"><a class="external active" href="#home" aria-controls="home" role="tab" data-toggle="tab" aria-selected="true">Bill Payment</a></li>
+<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="external" aria-selected="false">Connection Services</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home">
+<ul class="list">
+<li><a class="dedcription-btn external" title="Urban Bill Payment">Urban &amp; Rural Bill Payment</a></li>
+<!--li><a class="dedcription-btn" href="https://www.uppclonline.com" title="Urban Bill Payment">Urban Bill Payment</a></li>
+        <li><a class="dedcription-btn" href="https://uppcl.mpower.in/wss/index.htm" title="Rural Bill Payment"><span class="btn-icon"></span> Rural Bill Payment</a></li-->
+<li><a class="dedcription-btn external" href="https://payments.billdesk.com/eTopUp/genus/" title="Prepaid Recharge (Genus Meter)"><span class="btn-icon"></span> Prepaid Recharge (Genus Meter)</a></li>
+<li><a class="dedcription-btn external" href="https://www.uppclonline.com/dispatch/Portal/appmanager/uppcl/wss?_nfpb=true&amp;_pageLabel=uppcl_billInfo_payBill_home&amp;pageID=PB_1010" title="Smart Meter Prepaid Recharge"><span class="btn-icon"></span> Smart Meter Prepaid Recharge</a></li>
+<li><a class="dedcription-btn external" href="https://www.youtube.com/watch?v=mIwbf0Mla4I&amp;feature=youtu.be" title="How to pay Electricity Bill"><span class="btn-icon"></span> How to pay Electricity Bill (YT Video)</a></li>
+<!--li><a class="highlight-tab dedcription-btn" href="downloadmedia/UploadedPressRelease/pdf/C_202311200936157504.pdf" title="Tariff Order for FY 2022-23"><span class="btn-icon"></span> Tariff Order for FY 2022-23</a></li-->
+<li><a class="highlight-tab dedcription-btn external" href="downloadmedia/siteContent/202411121142213927Tariff Schedule_FY 2024-25.pdf" title="Tariff Order for FY 2024-25"><span class="btn-icon"></span> Tariff Order for FY 2024-25</a></li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane" id="profile">
+<ul class="list">
+<li><a class="dedcription-btn external" href="https://niveshmitra.up.nic.in" title=" Nivesh Mitra Portal for Commercial and Industrial Connection"> Nivesh Mitra Portal for Commercial and Industrial Connection</a></li>
+<li><a class="dedcription-btn external" href="https://jhatpat.uppcl.org/online/frmlogin.aspx" title="Jhatpat Portal for Domestic Connection">Jhatpat Portal for Domestic Connection</a></li>
+<li><a class="dedcription-btn external" href="https://uppcl.org/uppcl/en/article/new-electricity-connection-for-private-tube-well" title="Apply for New Connection for PTW">Apply for New Connection for PTW</a></li>
+<li><a class="dedcription-btn external" href="https://youtu.be/z6coO9dN_nE" title="Video for How to apply PTW connection online under full deposit scheme">Video for How to apply PTW connection online under full deposit scheme</a></li>
+<!--li><a class="dedcription-btn" href="#"><span class="btn-icon"></span> How to pay Electricity Bill</a></li>
+<li><a class="dedcription-btn" href="#"><span class="btn-icon"></span> Online (YT Video)</a></li--></ul>
+</div>
+</div>
+</div>
+
+  </div>
+  <div class="col-md-6"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="wrapper home-btm-slider" style="margin-top:15px;">
+<div class="sidebarbuttonemployee"><a href="https://uppcl.org/uppcl/en/article/employee-corner" class="external none" target="_blank" style="color:#fff;font-weight:bold;">employee Corner</a></div>
+<div class="container-fluid" style="background:url({{url('/')}}/sun-setting-silhouette-electricity-pylons.jpg) fixed no-repeat; background-size:cover">
+<div class="container common-container four_content gallery-container">
+<h3 style="text-align: center; font-weight: bold; color:#fff" tabindex="0" data-swp-font-size="24px">Consumer Corner</h3>
+
+<div class="card-deck" style="margin-top:25px;">
+<div class="flip-card">
+  <div class="flip-card-inner flipper">
+      <div class="front" style="background: url({{url('/')}}/img/Bill-Pay1.jpg); background-size: cover;">
+        <h1>Bill Generation and Payment</h1>
+      </div>
+    
+    
+    <div class="back">
+      <ul class="text-left">
+      <li class="text-center"><b>Bill Generation and Payment</b><hr></li>
+      <li>
+        <a href="https://www.uppclonline.com/dispatch/Portal/appmanager/uppcl/wss?_nfpb=true&amp;_pageLabel=uppcl_billInfo_payBill_home&amp;pageID=PB_1010" target="_blank" rel="noopener" title="Pay Bill Online" style="padding-left:2px;">
+          <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Pay Bill Online</a></li>
+      <li><a href="https://uppclmp.myxenius.com/login.html" target="_blank" rel="noopener" title="Multi-Story Recharge" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Multi-Story Recharge</a></li>
+      <li><a href="{{url('/')}}/prepaid-meter-recharge" title="Recharge Your Prepaid Meter" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Recharge Your Prepaid Meter</a></li>
+      <li><a href="https://www.uppclonline.com/dispatch/Portal/appmanager/uppcl/wss?_nfpb=true&amp;_pageLabel=uppcl_billInfo_smprepaidRecharge&amp;pageID=PREB_1010" target="_blank" rel="noopener" title="Smart Meter Prepaid Recharge" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Smart Meter Prepaid Recharge</a></li>
+      <li><a href="https://www.uppclonline.com/dispatch/Portal/appmanager/uppcl/wss?_nfpb=true&amp;_pageLabel=uppcl_billInfo_trustMeterReading&amp;pageID=1002_TMRNM" target="_blank" rel="noopener" title="Net-Meter Self Bill Generation" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Net-Meter Self Bill Generation</a></li>
+      <li><a href="https://www.uppclonline.com/dispatch/Portal/appmanager/uppcl/wss?_nfpb=true&amp;_pageLabel=uppcl_billInfo_trustMeterReading&amp;pageID=1002_TMR" target="_blank" rel="noopener" title="Self Bill Generation (upto 9 kw)" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Self Bill Generation (upto 9 kw)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=mIwbf0Mla4I" target="_blank" rel="noopener" title="How to Pay Electricity Bill Online?" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> How to Pay Electricity Bill Online?</a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner flipper">
+      <div class="front" style="background: url({{url('/')}}/img/New-Connection1.jpg); background-size: cover;">
+        <h1>New Connection</h1>
+      </div>
+    
+    
+    <div class="back">
+      <ul class="text-left">
+      <li class="text-center"><b>New Connection</b><hr></li>
+      <li><a href="http://jtp.uppcl.org/online/frmLogin.aspx" target="_blank" rel="noopener" title="Domestic Connection" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" style="color: #ff8d00;" aria-hidden="true"></i> Domestic Connection</a></li>
+      <li><a href="http://niveshmitra.up.nic.in/" target="_blank" rel="noopener" title="Comm. &amp; Indus. (above 20KW)" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Comm. &amp; Indus. (above 20KW)</a></li>
+      <li><a href="http://ptw.uppcl.org/online/account/login" target="_blank" rel="noopener" title="PTW/Agriculture Connection" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> PTW/Agriculture Connection</a></li>
+      <li><a href="https://jtp.uppcl.org/online/frmLogin.aspx" target="_blank" rel="noopener" data-swp-font-size="15px" title="Apply For Single Point To Multi Point Connection" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Apply For Single Point To Multi Point Connection</a></li>
+      <li><a href="https://pvvnl.org/faq/" title="How To Apply New Connection" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> How To Apply New Connection</a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner flipper">
+      <div class="front" style="background: url({{url('/')}}/img/Manage-Profile1.jpg); background-size: cover;">
+        <h1>My Connection</h1>
+      </div>
+    
+    
+    <div class="back">
+      <ul class="text-left">
+      <li class="text-center"><b>My Connection</b><hr></li>
+      <li><a href="https://pvvnl.org/urban-service-request/" rel="noopener" title="Online electricity Service Request" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Online electricity Service Request</a> – <a title="Video" href="https://www.youtube.com/watch?v=CfLyawyIi4w" target="_blank" rel="noopener">Video</a></li>
+      <li><a href="https://uppcl.mpower.in/wss/LoginNew.htm" target="_blank" rel="noopener" title="Check Your Bill" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Check Your Bill</a></li>
+      <li><a href="https://www.uppclonline.com/dispatch/Portal/appmanager/uppcl/wss?_nfpb=true&amp;_pageLabel=uppcl_loginreg_registration&amp;pageID=UM_1010" target="_blank" rel="noopener" title="Update Mobile No." style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Update Mobile No.</a></li>
+      <li><a href="{{url('/')}}/uploads/How-to-register-Bill-Revision-Complaint.pdf" class="mtli_attachment mtli_pdf" data-mtli="mtli_filesize174MB" target="_blank" rel="noopener" title="How to register Bill Revision Complaint – (Language – English &amp; Hindi)" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> How to register Bill Revision Complaint – <span tabindex="0">(Language – English &amp; Hindi) <span style="background-image:url('img/pdf.png'); background-repeat:no-repeat;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span></a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner flipper">
+      <div class="front" style="background: url({{url('/')}}/img/Complaint1.jpg); background-size: cover;">
+        <h1>Complaint</h1>
+      </div>
+    
+    
+    <div class="back">
+      <ul class="text-left">
+      <li class="text-center"><b>Complaint</b><hr></li>
+     <li><a href="https://appsavy.com/coreapps" target="_blank" rel="noopener" title="Register Complaint" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Register Complaint</a></li>
+      <li><a href="https://appsavy.com/coreapps" target="_blank" rel="noopener" title="Track Complaint" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Track Complaint</a></li>
+      <li><a href="http://jansunwai.up.nic.in/onlineComplaint.html" target="_blank" rel="noopener" title="Integrated Grievances Redress System" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Integrated Grievances Redress System</a></li>
+      <li><a href="{{url('/en')}}/19/46/Consumer-Grievance-Redressal-Forum" rel="noopener" title="Consumer Grievance Redressal Forum" style="padding-left:2px;">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color: #ff8d00;"></i> Consumer Grievance Redressal Forum</a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ Start News =========== -->
+
+
+<div class="wrapper home-btm-slider">
+<div class="container common-container four_content gallery-container">
+<div class="card-deck">
+<div class="card">
+  
+  <div class="card-body-">
+    <div class="list-group list-group-flush">
+      <iframe loading="lazy" id="iframe_important_link" class="scrl" src="{{url('/')}}/ImportantLink" width="100%" height="350px" frameborder="0"></iframe>
+    </div>
+  </div>
+  <div class="card-footer pp">
+    <p style="text-align: center;"><a href="{{url('/')}}/news/1" title="View More" style="color: #ff7c1b;"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View More</a></p>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body-">
+    <div class="list-group list-group-flush">
+      <iframe loading="lazy" id="iframe_important_link" class="scrl" src="{{url('/')}}/Highlights" width="100%" height="350px" frameborder="0"></iframe>
+    </div>
+  </div>
+  <div class="card-footer pp">
+    <p style="text-align: center;"><a href="{{url('/')}}/news/2" title="View More" style="color: #ff7c1b;"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View More</a></p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body-">
+    <div class="list-group list-group-flush">
+      <iframe loading="lazy" id="iframe_important_link" class="scrl" src="{{url('/')}}/NewsNotifications" width="100%" height="350px" frameborder="0"></iframe>
+    </div>
+  </div>
+  <div class="card-footer pp">
+    <p style="text-align: center;"><a href="{{url('/')}}/news/3" title="View More" style="color: #ff7c1b;"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View More</a></p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============ Latest News =========== -->
+
+<style>
+.Payment {
+    padding: 20px;
+    box-shadow: 0px 20px 25px rgb(0 0 0 / 33%);
+    border-radius: 20px;
+    background: #fff;
+    min-height: 403px;
+}
+.Payment .nav {
+    width: 100%;
+}
+.Payment .nav>li {
+    width: 46%;
+    margin: 5px;
+}
+.nav-pills>li {
+    float: left;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+.Payment .tab-content>.tab-pane {
+    padding: 20px 0;
+}
+.tab-content>.active {
+    display: block;
+}
+.Payment .nav-pills>li>a {
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+  
+    font-weight: bold;
+    border-bottom: 2px solid #e3e3e3;
+}
+.Payment .nav>li>a:hover, .Payment .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #de5a02;
+    color: #fff;
+}
+.Payment .nav-pills>li>a.active {
+    background: #de5a02;
+   
+}
+.Payment .list {
+    margin: 0;
+    padding: 0;
+}
+.Payment .list li {
+    list-style: none;
+    display: block;
+    margin-bottom: 1em;
+}
+.Payment .list li a {
+    background: #fff;
+    color: #002f5c;
+    width: 100%;
+    display: block;
+    padding: 10px 0px 10px 45px;
+    border-radius: 8px 20px 8px 20px;
+    border: 1px solid #de5a02;
+    position: relative;
+    font-weight: 600;
+}
+.dedcription-btn {
+    transition: all 0.3s;
+}
+.Payment .list li {
+    list-style: none;
+  
+}
+
+.latest_news_sec {
+
+<!-- background: #fafbfc;-->
+
+}
+
+.latest_news_sec h2 {
+
+font-family: 'Raleway', sans-serif;
+
+font-weight: 700;
+
+font-size: 1.625em;
+
+color: #323232;
+
+position: relative;
+
+margin-top: 97px;
+
+margin-left: 8px;
+
+}
+
+.latest_news_sec h2:before {
+
+content: '';
+
+width:45px;
+
+height:3px;
+
+background: #f6ba18;
+
+position: absolute;
+
+top: 40px;
+
+left: -2px;
+
+}
+
+.latest_news_sec .news_highlight {
+
+margin-top:52px;
+
+}
+
+.latest_news_sec .news {
+
+padding:0px;
+
+-webkit-transition: all 0.3s ease 0s;
+
+-o-transition: all 0.3s ease 0s;
+
+transition: all 0.3s ease 0s;	
+
+}
+
+.latest_news_sec .news .news_img_holder {
+
+position: relative;
+
+transition: all .3s ease;
+
+}
+
+.latest_news_sec .news:hover .news_img_holder {
+
+margin-top: -20px;
+
+}
+
+.latest_news_sec .news_opacity {
+
+background: rgba(40,47,57,0.7);
+
+position: absolute;
+
+height:100%;
+
+width:100%;
+
+bottom:0;
+
+left:0;
+
+right:0;
+
+top:0;
+
+}
+
+.latest_news_sec .news_details span{
+
+font-family: 'PT Serif', serif;
+
+font-style: italic;
+
+font-size: 1em;
+
+color: #f6ba18;
+
+}
+
+.latest_news_sec .news_details h4 {
+
+font-family: 'Open Sans', sans-serif;
+
+font-weight: 700;
+
+font-size: 1em;
+
+color:#fff;
+
+text-transform: uppercase;
+
+}
+
+.latest_news_sec  .news_details p {
+
+font-family: 'Open Sans', sans-serif;
+
+font-style: italic;
+
+font-size: 0.875em;
+
+line-height: 25px;
+
+color:#fff;
+
+line-height: 21px
+
+}
+
+.latest_news_sec .news_details {
+
+position: absolute;
+
+bottom: 0;
+
+padding-left:50px;
+
+-webkit-transition: all 0.3s ease 0s;
+
+-o-transition: all 0.3s ease 0s;
+
+transition: all 0.3s ease 0s;
+
+}
+
+.latest_news_sec .news_details:before {
+
+content: '';
+
+width:2px;
+
+height:61px;
+
+background: #cc1e2b;
+
+position: absolute;
+
+left: 18px;
+
+bottom: 20px;
+
+}
+
+.newsDetailHi:before {
+
+bottom:3px !important;
+
+}
+
+.news:hover {
+
+/*margin-top:-20px;*/
+
+}
+
+.news:hover .news_details { width:100%;
+
+background: #cc1e2b;
+
+}
+
+.news:hover .news_details:before {
+
+background: #fff;
+
+}
+
+@media only screen and (max-width: 768px) {
+.sahni-mt-40{
+margin-top: 40px;
+}
+
+
+
+}
+
+
+
+</style>
+
+
+<section class="p0 px-0 container-fluid latest_news_sec news_large home-btm-slider" style="padding-bottom: 380px;">
+<div class="news_highlight">
+<!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 news wow fadeInUp animated sahni-mt-40">
+<a href="https://jansunwai.up.nic.in/onlineComplaint" target="_blank">
+<div class="news_img_holder">
+  <img class="img-responsive" src="{{url('/')}}/img/igrs.jpeg" alt="Integrated Grievances Redress System" title="Integrated Grievances Redress System" style="width: 100%;height: 250px;">
+  <div class="news_opacity">
+  </div>
+  <div class="news_details">
+    <a href="https://jansunwai.up.nic.in/onlineComplaint" target="_blank">
+
+      <h4>Integrated Grievances Redress System</h4>
+      <p>Pashchimanchal Vidyut Vitran Nigam Limited, Government of Uttar Pradesh</p>
+    </a>
+  </div>
+</div>
+</a>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 news wow fadeInUp animated sahni-mt-40">
+<a href="{{url('/Office-Orders')}}">
+<div class="news_img_holder">
+  <img class="img-responsive" src="{{url('/')}}/img/Office-Orders.jpeg" alt="Office Orders" title="Office Orders" style="width: 100%;height: 250px;">
+  <div class="news_opacity">
+  </div>
+  <div class="news_details">
+    <a href="{{url('/Office-Orders')}}">
+      <h4>Office Orders</h4>
+      <p>Pashchimanchal Vidyut Vitran Nigam Limited, Government of Uttar Pradesh</p>
+    </a>
+  </div>
+</div>
+</a>
+</div>-->
+<div class="wrapper home-btm-slider">
+            <div class="container-fluid common-container four_content gallery-container">
+               <div class="gallery-area clearfix">
+                  <div class="gallery-heading">
+                     <h3>Photo Gallery</h3>
+                     <a class="bttn-more bttn-view" href="{{url('/')}}/gallery" title="View All About Photo Gallery"><span>View All</span></a> 
+                  </div>
+                  <div class="gallery-holder">
+                     <div id="galleryCarousel" class="flexslider">
+                        <ul class="slides">
+              @php
+              $photo = DB::table('photos')->orderby('id','desc')->take(4)->get();
+              $i=1;
+              @endphp
+                           @foreach($photo as $photos)
+                           <li data-thumb="{{ url('/') }}/uploads/{{ $photos->image }}" data-thumb-alt="slider{{$i}}">
+                              <img src="{{ url('/') }}/uploads/{{ $photos->image }}" style="height:400px;" alt="gallery iamge"/>
+                           </li>
+                           @php
+                           $i++;
+                           @endphp
+                           @endforeach
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="gallery-right">
+                  <div class="video-heading">
+                     <h3>Video Gallery</h3>
+                     <a class="bttn-more bttn-view" href="{{url('/')}}/video" title="View All About video"><span>View All</span></a> 
+                  </div>
+                  <div class="video-wrapper">
+                     <iframe width="" height="" src="https://www.youtube.com/embed/qDiEs8hGBME?si=3uXGw0kwR-GT0str" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%;height: 400px;"></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news wow fadeInUp animated sahni-mt-40">
+<a href="{{url('/video')}}">
+<div class="news_img_holder">
+  <img class="img-responsive" src="{{url('/')}}/img/Video-Gallery.jpeg" alt="Video Gallery" title="Video Gallery" style="width: 100%;height: 350px;">
+  <div class="news_opacity">
+  </div>
+  <div class="news_details">
+    <a href="{{url('/video')}}">
+      <h4>Video Gallery</h4>
+      <p>Pashchimanchal Vidyut Vitran Nigam Limited, Government of Uttar Pradesh</p>
+    </a>
+  </div>
+</div>
+</a>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news wow fadeInUp animated sahni-mt-40">
+    
+<a href="{{url('/gallery')}}">
+<div class="news_img_holder">
+  <img class="img-responsive" src="https://pvvnl.org/uploads/1732616369.jpg" alt="Image Gallery" title="Image Gallery" style="width: 100%;height: 350px;">
+  <div class="news_opacity">
+  </div>
+  <div class="news_details">
+    <a href="{{url('/gallery')}}">
+      <h4>Image Gallery</h4>
+      <p>Pashchimanchal Vidyut Vitran Nigam Limited, Government of Uttar Pradesh</p>
+    </a>
+  </div>
+</div>
+</a>
+</div>
+
+</div>
+</section> <!-- End latest_news_sec -->
+
+
+<style>
+.card-img-overlay {
+top: 200px !important;
+}
+
+.shani1:hover {
+
+padding-bottom: 20px;
+
+}
+
+.shani1:hover .shani2{
+
+padding-bottom: 20px !important
+background: red !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+.carousel-wrapper {
+margin-top: 1150px; 
+}
+
+}
+.flip-container {
+    width: 100%;
+    height: 259px;
+    float: left;
+    border-radius: 10px;
+}
+.flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.front {
+   
+    color: #fff;
+    text-align: center;
+    border: 5px solid #fff;
+}
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.front, .back {
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.brand-items {
+	list-style: none;
+	border-radius: 10px;
+	padding: 8px 20px 5px 20px;
+	overflow: hidden;
+
+	width: 100%;
+	box-shadow: -7px 1px 40px rgb(0 0 0/18%);
+	margin: 0;
+}
+</style>
+<div class="container-fluid" style="padding-bottom:50px;">
+<h3>IMPORTANT LINKS</h3>
+
+<section class="wrapper carousel-wrapper home-btm-slider">
+
+<div class="container-fluid brand-items common-container four_content carousel-container">
+<div id="flexCarousel" class="flexslider carousel">
+<ul class="slides">
+<li><a target="_blank" href="https://www.india.gov.in/" title="India Govt" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/India-Govt.jpg" alt="India Govt"></a>
+</li>
+<li><a target="_blank" href="https://uppcl.org/uppcl/en" title="Image of Uttar Pradesh Power Corporation Ltd" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Uttar-Pradesh-Power-Corporation-Ltd-.jpg" alt="Image of Uttar Pradesh Power Corporation Ltd"></a>
+</li>
+<li><a target="_blank" href="https://www.uperc.org/Default2.aspx" title="Image of Uttar Pradesh Electricity Regulatory Commission" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Uttar-Pradesh-Electricity-Regulatory-Commission.jpg" alt="Image of Uttar Pradesh Electricity Regulatory Commission"></a>
+</li>
+<li><a target="_blank" href="https://up.gov.in/en" title="Image of Government of Uttar Pradesh" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Government-of-Uttar-Pradesh.jpg" alt="Image of Government of Uttar Pradesh"></a>
+</li>
+<li><a target="_blank" href="http://upptcl.org/upptcl" title="Uttar Pradesh Power Transmission Corporation Ltd" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Uttar-Pradesh-Power-Transmission-Corporation-Ltd.jpg" alt="Uttar Pradesh Power Transmission Corporation Ltd"></a>
+</li>
+<li><a target="_blank" href="https://www.uprvunl.org/index.php/" title="Image of Uprvunl" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Uprvunl.jpg" alt="Image of Uprvunl"></a>
+</li>
+<li><a target="_blank" href="https://kesco.co.in/" title="Kanpur Electricity Supply Company" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/kanpur-Electricity-Supply-Company.jpg" alt="Kanpur Electricity Supply Company"></a>
+</li>
+<li><a target="_blank" href="http://puvvnl.up.nic.in/" title="Purvanchal Vidyut Vitaran Nigam Ltd" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Purvanchal-Vidyut-Vitaran-Nigam-Ltd.jpg" alt="Purvanchal Vidyut Vitaran Nigam Ltd"></a>
+</li>
+<li><a target="_blank" href="http://www.mvvnl.in/" title="Madhyanchal Vidyut Vitaran Nigam Ltd" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Madhyanchal-Vidyut-Vitaran-Nigam-Ltd.jpg" alt="Madhyanchal Vidyut Vitaran Nigam Ltd"></a>
+</li>
+<li><a target="_blank" href="https://www.dvvnl.org/" title="Dakshinanchal Vidyut Nigam" class="my-4 mx-3">
+  <img src="{{url('/')}}/img/Dakshinanchal-Vidyut-Nigam.jpg" alt="Dakshinanchal Vidyut Nigam"></a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+@endsection
+@section('script')
+<script src="{{url('/')}}/theme/js/custom.js"></script>
+
+
+  <style>
+        .custom-alert {
+            position: fixed;
+            z-index: 1001; /* Ensure it is above the overlay */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 3px solid #ff7c1b;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: -3px 14px 20px 20px rgb(0 0 0 / 52%);
+            max-width: 700px;
+        }
+
+        .custom-alert-content {
+            text-align: center;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -48px;
+            right: -25px;
+            font-size: 45px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #f00;
+        }
+
+        .custom-alert img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            cursor: pointer; /* Indicate that the image is clickable */
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+        }
+    </style>
+     @php
+    $img = DB::table('alert_image')->where('id', 1)->first();
+    @endphp
+    <script>
+        // Function to display custom alert with image
+        function displayImageAlert() {
+            // Create an overlay
+            var overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            
+            // Create a custom alert box
+            var customAlert = document.createElement('div');
+            customAlert.classList.add('custom-alert');
+            
+            var customAlertContent = document.createElement('div');
+            customAlertContent.classList.add('custom-alert-content');
+            
+            var closeButton = document.createElement('span');
+            closeButton.classList.add('close-btn');
+            closeButton.innerHTML = '&times;';
+            closeButton.onclick = function() {
+                document.body.classList.remove('no-scroll');
+                document.body.removeChild(customAlert);
+                document.body.removeChild(overlay);
+            };
+            
+            var image = document.createElement('img');
+            image.src = 'img/{{$img->image}}';
+            image.alt = 'Alert Image';
+            image.onclick = function() {
+                window.open('https://wa.me/message/3PFM4YYBKRZOE1', '_blank'); // Open link in a new tab
+            };
+            
+            var message = document.createElement('p');
+            message.textContent = '';
+            
+            customAlertContent.appendChild(closeButton);
+            customAlertContent.appendChild(image);
+            customAlertContent.appendChild(message);
+            
+            customAlert.appendChild(customAlertContent);
+            
+            document.body.classList.add('no-scroll');
+            document.body.appendChild(overlay);
+            document.body.appendChild(customAlert);
+        }
+
+        // Delay the alert by 3 seconds (3000 milliseconds)
+        setTimeout(displayImageAlert, 1);
+    </script>
+@endsection

@@ -1,0 +1,72 @@
+/** * Owl Carousel v2.2.1 * Copyright 2013-2021 David Deutsch * Licensed under  () */.owl-theme .owl-dots,  .owl-theme .owl-nav {
+text-align:center;
+-webkit-tap-highlight-color:transparent
+}
+.owl-theme .owl-nav [class*=owl-] {
+color:#FFF;
+font-size:14px;
+margin:5px;
+width:35px;
+background:#FFAE00;
+height:35px;
+border:0.14em solid #FFAE00;
+position:relative;
+display:inline-block;
+cursor:pointer;
+border-radius: 50%
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+background:#436383;
+border:0.14em solid #436383;
+color:#FFF;
+text-decoration:none
+}
+.owl-theme .owl-nav .disabled {
+cursor:default
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+margin-top:0;
+}
+.owl-theme .owl-dots .owl-dot {
+display:inline-block;
+zoom:1
+}
+.owl-prev:hover::after, .owl-next:hover::after {
+color:#FFFFFF
+}
+.owl-theme .owl-dots .owl-dot span {
+width:10px;
+height:10px;
+margin:5px 7px;
+background:#D6D6D6;
+display:block;
+-webkit-backface-visibility:visible;
+transition:opacity .2s ease;
+border-radius:30px
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+background:#000;
+}
+@import "../font-icons/material-design-iconic-font/css/materialdesignicons.min.html";
+.owl-prev::after {
+font-family:"Material Design Icons";
+content:'\f141';
+left:5px;
+position: absolute;
+top:2px;
+color:#FFFFFF;
+font-size:20px
+}
+.owl-next::after {
+font-family:"Material Design Icons";
+content:'\f142';
+left:7px;
+position: absolute;
+top:2px;
+color:#FFFFFF;
+font-size:20px
+}
+
+.owl-next span { display:none} 
+.owl-prev span { display:none} 
+.mr-3, .mx-3 {margin-right: 1rem!important;}

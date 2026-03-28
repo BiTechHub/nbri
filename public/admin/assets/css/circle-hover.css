@@ -1,0 +1,108 @@
+@font-face {
+font-family: 'ecoicon';
+src:url('../fonts/ecoicons/ecoicon.html');
+src:url('../fonts/ecoicons/ecoicond41d.html?#iefix') format('embedded-opentype'), url('../fonts/ecoicons/ecoicon-2.html') format('woff'), url('../fonts/ecoicons/ecoicon-3.html') format('truetype'), url('../fonts/ecoicons/ecoicon-4.html#ecoicon') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+.hi-icon-wrap {
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+}
+.hi-icon {
+	display: inline-block;
+	font-size: 0px;
+	cursor: pointer;
+	margin: 0 30px;
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #fff;
+}
+.hi-icon img {
+	position:absolute;
+	top:30px;
+	left:30px
+}
+.img-2 {
+	opacity:0;
+}
+.company-certification .col-xs-3:hover .img-1 {
+	opacity:0;
+}
+.company-certification .col-xs-3:hover .img-2 {
+	opacity:1;
+}
+.hi-icon:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.hi-icon:before {
+	font-family: 'ecoicon';
+	speak: none;
+	font-size: 48px;
+	line-height: 90px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+.hi-icon-cog {
+	background:url(../imgs/contracting.html) no-repeat center center;
+}
+.company-certification .col-xs-3:hover .hi-icon-cog {
+	background:url(../imgs/contracting-hover.html) no-repeat center center;
+}/* Effect 7 */
+.hi-icon-effect-7 .hi-icon {
+	box-shadow: 0 0 0 4px #FFC300;
+	-webkit-transition: background 0.2s, color 0.2s;
+	-moz-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+.hi-icon-effect-7 .hi-icon:after {
+	top: -8px;
+	left: -8px;
+	padding: 8px;
+	z-index: -1;
+	opacity: 0;
+}
+/* Effect 7a */
+.hi-icon-effect-7a .hi-icon:after {
+	box-shadow: 0 0 0 6px #FFC300;
+	-webkit-transition: opacity 0.2s, box-shadow 0.2s;
+	-moz-transition: opacity 0.2s, box-shadow 0.2s;
+	transition: opacity 0.2s, box-shadow 0.2s;
+}
+.company-certification .col-xs-3:hover .hi-icon {
+	background:#FFC300;
+	color:#ffffff
+}
+.company-certification .col-xs-3:hover .hi-icon:after {
+	opacity: 1;
+}
+.company-certification .col-xs-3:hover h3 {
+	color:#FFC300
+}
+.company-certification .col-xs-3 {
+	margin: 15px 0
+}
+.hi-icon-effect-7a .hi-icon:before {-webkit-transform: scale(0.8); -moz-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8);
+	opacity: 0.7;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	transition: transform 0.2s, opacity 0.2s;
+}
+.hi-icon-effect-7a .hi-icon:hover:before {}

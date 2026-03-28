@@ -1,0 +1,28 @@
+#filters {margin:20px auto 20px auto;background:#ececec; padding:5px 0; border-bottom:1px solid #e5e5e5; border-top:1px solid #e5e5e5; list-style:none; width:100%; text-align:center; display:inline-block}
+
+
+#filters li {display:inline-block; margin-bottom:10px}
+#filters li span {display: block; font-size:12px; letter-spacing:1.4px; text-transform:uppercase; font-weight:600; position:relative; padding:9px 20px;	text-decoration:none; color:#000000; font-size:14px; cursor: pointer; margin:0;}
+#filters li span.active, #filters li span:hover {color:#efa700; background:#FFFFFF;}
+#filters li span.active::before { content:''; height:3px; background:#ffcc33; width:100%; left:0; border-bottom:3px solid #efa700; position:absolute;	bottom:-2px}
+#filters li span.active::after {content:''; height:3px; background:#ffcc33; width:100%; left:0; border-bottom:3px solid #efa700; position:absolute; top:-2px}
+#portfoliolist {min-height:315px}
+#portfoliolist .portfolio {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; width: 33.33333333%; margin: 0 0 30px 0; padding: 0 15px; float: left;}
+#portfoliolist .portfolio {position: relative; height: auto;}
+#portfoliolist2 .portfolio {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; width: 31%; margin: 1% 1% 5% 1%;	float: left;}
+#portfoliolist2 .portfolio {position: relative; height: auto;}
+
+/*#Mobile (Portrait) - Note: Design for a width of 320px*/
+@media only screen and (max-width: 800px) {
+#portfoliolist .portfolio {width:50%;}
+#banner h1 {font-size:40px; font-weight: 300; line-height:normal; margin:0; padding:0;}
+#banner h5 {font-size:15px; font-weight: 300; line-height:normal; margin:0; padding:0;}
+.navbar-brand > img {width:160px;}
+.navbar-brand {margin: 10px 0 0;}
+}
+
+@media only screen and (max-width: 480px) {
+.page_top_wrap .page_title {font-size:25px; margin-bottom:20px}
+#banner h1 {font-size:25px; font-weight: 300; line-height:normal; margin:0; padding:0;}
+#banner h5 {font-size:15px; font-weight: 300; line-height:normal; margin:0; padding:0;}
+}

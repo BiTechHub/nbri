@@ -1,0 +1,98 @@
+/*------------------------------------------------------------------
+[Main Stylesheet]
+Project:    Architevo Builder
+Version:    1.1
+Last change:    15/02/2021
+Assigned to:    Studioux
+Primary use:    Construction Services
+------------------------------------------------------------------
+[Table of contents]
+
+1. Body / body
+2. Header / .top-header
+3. Navigation / .navbar
+4. Menu Tabs / .nav-tabs
+5. Carousel / .carousel
+6. About-section / .About-section
+7. Our-services / .top-tabs
+8. projects-section / .projects-section
+9. company-certification /.company-certification/ 
+10.subscribe /#subscribe-main
+11.content-section /#content-section
+12.staff-section /12.staff-section
+13.counter-section / .counter-section
+14.news-section / .news-section
+15.testimonial / .testimonial
+16.footer-logos / .footer-logos
+17.Footer / .footer
+-------------------------------------------------------------------
+# [Color codes]
+Body-Font:  	#000 {dark}
+Background:		#ffffff (white)
+Content:		#222 (light black)
+a (standard):	#000 (black)
+a (visited):	#000000 (dark)
+a (active):	 	#ffb100 (dark Yellow)
+----------------------------------------------------------------------- 
+[Font Properties]
+
+Body font:       'Open Sans', sans-serif
+------------------------------------------------------------------------*/
+
+/*[Google Fonts]*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+
+/*[Bootstrap Core CSS]*/
+
+@import "bootstrap.min.css";
+@import "style.min.css";
+
+/*[basic CSS]*/
+@import "basic.css";
+
+/*[Animation CSS]*/
+@import "animate.css";
+
+/*[Hover effects CSS]*/
+@import "component-2.css";
+@import "hover.css";
+@import "modern-hover.css";
+
+/*[Fonts CSS]*/
+@import "font-awesome/css/font-awesome.min.css";
+@import "flaticon.css";
+@import "../font-icons/simple-line-icons/css/simple-line-icons.css";
+@import "../font-icons/weather-icons/css/weather-icons.min.css";
+@import "../font-icons/iconmind/iconmind.css";
+@import "../font-icons/themify-icons/themify-icons.css";
+@import "../font-icons/flag-icon-css/flag-icon.min.css";
+@import "../font-icons/material-design-iconic-font/css/materialdesignicons.min.css";
+
+/*[Hover effects CSS]*/
+@import "circle-hover.css";
+
+/*[Shapes CSS]*/
+@import "shapes.css";
+
+/*[OWL CAROUSEL CSS]*/
+@import "owlcarousel/owl.carousel.min.css";
+@import "owlcarousel/owl.theme.default.min.css";
+
+/*[Auto Arrange div CSS]*/
+@import "mixitup.css";
+
+/*[Number scroller CSS]*/
+@import "counter.css";
+
+/*[Default Theme CSS]*/
+@import "style.css";
+
+/*[Responsive CSS]*/
+@import "responsive.css";
+
+/*------------------------------css ends here-------------------------------------*/

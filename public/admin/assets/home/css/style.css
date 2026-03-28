@@ -1,0 +1,350 @@
+/*------------------------------------------------------------------
+[Main Stylesheet]
+
+Project:    Architevo Builder
+Version:    1.1
+Last change:    15/02/2021
+Assigned to:    Studioux
+Primary use:    Construction Services
+------------------------------------------------------------------
+[Table of contents]
+
+1. Body / body
+2. Topography
+3. Top, / .top-bg
+4. Navigation / .navbar
+5. Carousel / .carousel
+6. Section / .section
+7. services-sec / .services-sec
+8. projects-section / .projects-section
+9. request-a-quote/ 9.request-a-quote
+10.recent-projects / .recent-projects
+11.Happy customers / .happy-customers
+12.sign up / .sign-up
+13.Footer / .footer
+14.Preloader / .Preloader
+-------------------------------------------------------------------
+# [Color codes]
+Body-Font:  	#000 {dark}
+Background:		#ffffff (white)
+Content:		#222 (light black)
+a (standard):	#002e5b (black)
+a (visited):	#f2bb00 (dark Yellow)
+a (active):	 	#ffb100 (dark Yellow)
+----------------------------------------------------------------------- 
+[Font Properties]
+
+Body font:       'Open Sans', sans-serif
+------------------------------------------------------------------------*/
+/*
+Fonts 
+---------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap');
+@import url('../../css/owlcarousel/owl.carousel.min.css');
+@import url('../../css/owlcarousel/owl.theme.default.min.css');
+/*
+Fonts 
+---------------------------------------*/
+
+/*
+1.Body 
+---------------------------------------*/
+body {font-family: 'Open Sans', sans-serif; padding:130px 0 0 0} 
+/*
+1.Body 
+---------------------------------------*/
+
+/*
+2.Topography 
+---------------------------------------*/
+a {color:#002e5b; text-decoration:none}
+a:hover {color:#f2bb00}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;} 
+.oswald {font-family: 'Oswald', sans-serif;}
+/*
+2.Topography 
+---------------------------------------*/
+
+/*
+3.Topography 
+---------------------------------------*/
+.top-bg {background:#002e5b;line-height:46px;color:#fff;width:100%; font-size:14px;}
+.top-bg a {color:#fff}
+.top-bg { height:46px; transition: all 0.5s ease;}
+/*
+3.Topography 
+---------------------------------------*/
+
+/*
+4.Navbar 
+---------------------------------------*/
+.navbar {position:relative;display: -ms-flexbox;
+display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;-ms-flex-align: center;align-items: center;-ms-flex-pack: justify;justify-content: space-between; }
+.navbar-default .navbar-nav>li>a {color:#000;}
+.navbar-expand-sm .navbar-nav .nav-link {font-family: 'Oswald', sans-serif;}
+.navbar-toggler { position:absolute; right:15px; top:20px}
+.fixed-top { position:fixed; background-color:#fff}
+#mainNav {box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);background-color:#fff;transition:background-color .2s ease}
+.navbar-light .navbar-nav .nav-link { color:#000; font-family: 'Oswald', sans-serif;     text-transform: uppercase;font-size: 15px;font-weight:400;}
+
+.nav-item .dropdown-item{text-transform: uppercase;font-size: 14px;font-weight: 400;}
+
+.navbar-default {background:#fff}
+.navbar-expand-sm .navbar-nav .nav-link { padding:30px 28px; color:#000}
+.dropdown-menu {font-family: 'Oswald', sans-serif;     border-radius:0;}
+
+@media (min-width:992px) {
+#mainNav {box-shadow:none;background-color:#fff}
+#mainNav .navbar-brand {color:rgba(255, 255, 255, .7)}
+#mainNav.navbar-scrolled {box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);background-color:#fff}
+.navbar-expand-lg .navbar-nav .nav-link { padding-top:30px; padding-bottom:30px; padding-left:30px; padding-bottom:30px; padding-right:30px;}
+.navbar-shrink .top-bg { height:0;  transition: all 0.5s ease; overflow:hidden}
+.nav-link img {transition: all 0.5s ease; width:255px}
+.navbar-shrink .nav-link img { width:180px; margin-top:15px; transition: all 0.5s ease;}
+.navbar-shrink { border-bottom:solid 1px #002e5b}
+.logo-mobile { display:none}
+.mx-auto2 { margin:0 auto!important}
+.navbar { padding:0}
+
+
+.dropdown:hover .dropdown-menu{display: block;}
+.dropdown-menu{margin-top:0;}
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {color:#f79d05;}
+
+.dropdown-menu a:hover { background:#eaecef; color:#212529}
+.dropdown-menu a:focus { background:#eaecef; color:#212529}
+.dropdown-menu[data-bs-popper] {left:0;margin-top:0;}
+/*
+4.Navbar 
+---------------------------------------*/
+
+/*
+5.carousel 
+---------------------------------------*/
+#carousel-1 .carousel-item {height:80vh;min-height: 300px;background: no-repeat center center scroll;-webkit-background-size:cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+.portfolio-item {margin-bottom: 30px;}
+.carousel-caption {bottom:25%;}
+.banner-text p{ text-transform:uppercase; letter-spacing:2px}
+.banner-text h3 { text-transform:uppercase; font-size:80px; font-weight:700; margin:0; padding:0;}
+.banner-text .btn { background:#f2bb00; border:0; font-size:18px; padding:15px 40px; margin-top:40px; color:#00284c;}
+.banner-text .btn:hover { background:#00284c; color:#fff;}
+
+.social-media { position:absolute; top:0; z-index:999;}
+.social-media a {background:#303c57; padding:20px 0; margin:0 5px; color:#fff; display:inline-block; width:55px; text-align:center; border-bottom-left-radius:10%; border-bottom-right-radius:10%;}
+.social-media a:hover { background:#f2bb00}
+.get-a-free-quote { background:#f2bb00; z-index:999; right:0; display:block; padding:20px 60px; color:#000; font-size:18px;  border-bottom-left-radius:5px; border-bottom-right-radius:5px; font-family: 'Oswald', sans-serif; font-weight:500}
+.get-a-free-quote:hover { color:#fff; text-decoration:none; background:#00284c;}
+.arrow-css { border:1px solid #dfdfdf; width:40px; height:40px; line-height:40px;} 
+/*
+5.carousel 
+---------------------------------------*/
+
+/*
+6.section 
+---------------------------------------*/
+.section { padding:50px 0}
+.heading {color:#666d81; font-size:16px;}
+.heading p { margin:0 0 5px 0; padding:0; font-family: 'Oswald', sans-serif; letter-spacing:2px;}
+.heading h2 {color:#002e5b; font-weight:600; font-size:50px;}
+/*
+6.section 
+---------------------------------------*/
+
+/*
+7.services 
+---------------------------------------*/
+.services { margin-bottom:50px}
+.box { background:#f2f3f5; text-align:center; padding:40px 0; cursor:pointer}
+.box:hover { background:#f2bb00}
+.box h4 {font-size:14px; margin-top:18px; text-transform:uppercase}
+.services .owl-dot span { width:15px!important; height:15px!important; background:#535073}
+.services  .owl-dots .owl-dot span { margin:0 5px}
+.services .owl-theme .active, .services .owl-dot:hover span { background:#b4b2d3!important}
+.slider-section { margin-bottom:60px}
+.right-box {background:#f2bb00; padding:30px; min-height:100%; color:#002e5b; border-radius:5px}
+.right-box h3 {font-size:36px; line-height:40px; margin-bottom:45%;} 
+.right-box a { font-size:14px; color:#002e5b; letter-spacing:3px}
+.text-color {color:#080062}
+.text-css h3 { font-size:24px; color:#002e5b}
+.text-css p { font-size:16px; line-height:28px}
+.text-css p a { text-transform:uppercase; font-weight:700;}
+.text-css p a i { margin-left:10px}
+.progress {height: .4rem;background: #f2f3f5;margin: 0px 0 40px 0;}
+/*
+7.services 
+---------------------------------------*/
+ 
+/*
+8.video-section
+---------------------------------------*/
+.bg-css {background: url(../../imgs/home/bg.jpg) no-repeat center center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; padding:100px 0}
+.bg-css  h2 { margin:0; padding:0; font-weight:700; font-size:50px;}
+.video .btn { background:#f2bb00; width:90px; height:90px; margin:0 auto; line-height:90px; padding:0; border-radius:100%; margin-bottom:20px}
+.video .btn:hover {background:#002e5b}
+/*
+8.video-section
+---------------------------------------*/
+
+/*
+9.request-a-quote
+---------------------------------------*/
+.request-a-quote {background: linear-gradient(to left, #f2bb00 50%, #fff 50%); padding:50px 0}
+.request-a-quote h3 { font-size:50px; color:#fff;}
+.request-a-quote .form-control { font-size:17px; padding:15px 30px}
+.request-a-quote .btn { background:#002e5b; border:0; font-size:18px; padding:15px 40px;}
+.request-a-quote .btn:hover { background:#fff; color:#000;}
+
+.request-a-quote h4 { font-size:33px; margin-top:20px; margin-bottom:50px}
+.request-a-quote h5 { font-size:18px;}  
+
+.modal-header {background: #fecb17;}
+.close {float: right;font-size: 30px;font-weight: 700;line-height:1;color:#000;filter: alpha(opacity=20);}
+
+@media (min-width: 768px){.modal-content {width: 600px;}}
+
+.page-subheader h2 {color: #ffffff;
+font-size: 20px;font-weight: 700;letter-spacing: 1px;margin-bottom: 0;text-transform: uppercase;}
+
+.border2 {height:3px;width:30px;background:#f2bb00;margin: 5px 0 20px 0;}
+.btn-clear {color: #ffffff;background: #ffd200;font-size: 16px;cursor: pointer;display: inline-block;font-weight: 600;padding: 7px 20px;border-radius: 0;border-bottom: 3px solid #ef7001;text-transform: uppercase;transition: all 0.3s ease;}
+
+.blue-btn {background:#002e5a;color:#fff;border-bottom: 3px solid #000000;}
+.blue-btn:hover { background:#000; color:#fff;}
+
+.phone-n {position: absolute; right:0; width:63px;height:100%;background:#002e5b;top:0;
+border-left: solid 3px #fff;    border-radius: .25rem!important;}
+.phone-n { color:#fff}
+.rotate {transform: translateX(-39%) translateY(270%) rotate(-90deg);width:250px;}
+.rounded {
+border-radius: .25rem!important;}
+.right-img { padding:0 30px}
+.progress { height:.4rem; background:#f2f3f5} 
+#requestForm .col-md-6 { padding-left:5px; padding-right:5px }
+#requestForm .col-md-12 { padding-left:5px; padding-right:5px }
+#requestForm .form-control { font-size:14px; border-radius:0}
+#requestForm textarea { height:100px}
+/*
+9.request-a-quote
+---------------------------------------*/
+
+/*
+10.recent-projects
+---------------------------------------*/
+.recent-projects { padding:87px 0 0 0; background:#f2f3f5}
+.img-hover { width:100%; height:100%; left:0; right:0; top:0; bottom:0;}
+.img-text {position:absolute; bottom:50px; left:20px; z-index:999; padding:0 30px}
+.img-text h4 { color:#fff; font-size:30px;}
+.img-text p { color:#fff; font-size:15px; font-weight:300; }
+.owl-carousel .owl-item img { max-width:100%;}
+ 
+
+.image-layer {
+background: rgba(28,30,61,0);
+background: -moz-linear-gradient(top, rgba(28,30,61,0) 0%, rgba(28,30,61,0) 30%, rgba(28,30,61,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(28,30,61,0)), color-stop(30%, rgba(28,30,61,0)), color-stop(100%, rgba(28,30,61,1)));
+background: -webkit-linear-gradient(top, rgba(28,30,61,0) 0%, rgba(28,30,61,0) 30%, rgba(28,30,61,1) 100%);
+background: -o-linear-gradient(top, rgba(28,30,61,0) 0%, rgba(28,30,61,0) 30%, rgba(28,30,61,1) 100%);
+background: -ms-linear-gradient(top, rgba(28,30,61,0) 0%, rgba(28,30,61,.4) 30%, rgba(28,30,61,1) 100%);
+background: linear-gradient(to bottom, rgba(28,30,61,0) 0%, rgba(28,30,61,.4) 30%, rgba(28,30,61,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1e3d', endColorstr='#1c1e3d', GradientType=0 );min-height:50%;
+z-index: 0;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0
+}
+
+.projects .owl-nav  {position:absolute; z-index:999;top:-70px;right:0;}
+.projects .owl-prev::after {top:0;}
+.projects .owl-next::after {top:0;}
+ 
+/*
+10.recent-projects
+---------------------------------------*/
+
+.logo2 { padding:70px 0}
+
+/*
+11.Happy Customers
+---------------------------------------*/
+.happy-customers { background:#002e5b; padding:60px 0}
+.happy-customers .owl-dot span { width:15px!important; height:15px!important; background:#535073!important}
+.happy-customers  .owl-dots .owl-dot span { margin:0 5px}
+.happy-customers .owl-theme .owl-dots .owl-dot.active span, .happy-customers .owl-theme .owl-dots .owl-dot:hover span { background:#fff!important}
+
+.testimonails-box { background:#fff; padding:60px 50px; text-align:center; border-radius:5px}
+.testimonails-box p { font-size:19px; line-height:35px}
+.testimonails-box h4 { display:block; font-size:20px; color:#002e5b; border-top: solid 1px #e7eaee; padding:15px 0 0 0}
+.testimonails-box h4 span { display:block; font-size:12px; text-transform:uppercase; letter-spacing:2px; margin-top:10px; color:#666d81}
+.owl-theme .owl-nav.disabled+.owl-dots {margin-top:30px;}
+/*
+11.Happy Customers
+---------------------------------------*/
+
+/*
+12.sign-up
+---------------------------------------*/
+.sign-up {background:#f2bb00; padding:60px 0;}
+.input-css { width:69%; background:#fff; text-align:left; padding:20px 20px; margin-right:8px; font-family: 'Oswald', sans-serif;}
+.sign-up .btn-info {background:#002e5b; border:0; font-size:18px; padding-left:30px; padding-right:30px; font-family: 'Oswald', sans-serif; border:0; color:#fff;}
+.sign-up .btn-info:hover {background:#2d3235; border:0;}
+.sign-up .btn-info:focus {background:#2d3235; border:0;}
+.sign-up h4 {font-size:28px; font-weight:bold; color:#002e5b; margin:20px 0 0 0}
+/*
+12.sign-up
+---------------------------------------*/
+
+/*
+13.footer
+---------------------------------------*/
+.footer { background:url(../../imgs/home/footer-bg.jpg) repeat center center; width:100%; height:100%; padding:68px 0 0 0; color:#fff}
+.footer p { font-weight:300; font-size:14px; line-height:25px; color:#fff}
+.footer ul { margin:0; padding:0;}
+.footer li { margin:0; padding:0;list-style:none; line-height:35px;}
+.footer a { color:#fff} 
+.footer a:hover {color:#f2bb00}
+.footer h3 { font-size:20px;} 
+.footer-text { padding:0 30px 0 0}
+.copyright { font-size:14px; color:#b1b7bb;  border-top:solid 1px #414146; padding:20px 0; margin-top:40px;}
+.copyright a {color:#f2bb00} 
+.copyright p { margin:15px 0 0 0; vertical-align:middle}
+.social-media2 { float:right;}
+.social-media2 a { background:#2d3235; width:43px; height:43px; text-align:center; display:inline-block; line-height:43px; color:#fff; margin-left:10px; border-radius:100%}
+.social-media2 a:hover { background:#f2bb00; color:#002e5b}
+.progress-bar { background:#f2bb00}
+/*
+13.footer
+---------------------------------------*/
+
+/*14. Preloader
+---------------------------------------*/
+#preloader {
+background: #FFC600 url(../../imgs/preloader.gif) no-repeat center center;
+height: 100%;
+background-size:250px;
+position: fixed;
+width: 100%;
+z-index: 9999999;
+right: 0;
+left: 0;
+bottom: 0;
+top:0;
+overflow-y:hidden}
+.loading {overflow: hidden}
+#preloader > img {display:none}
+/*14. Preloader
+---------------------------------------*/
+
+.form-group {margin-bottom: 1rem;}
+.container {max-width: 1170px;}
+.request-a-quote .col-md-11 {padding:0 0 0 15px;}
+a { text-decoration:none}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){border-top-left-radius:.3rem!important; border-bottom-left-radius:.3rem!important;}

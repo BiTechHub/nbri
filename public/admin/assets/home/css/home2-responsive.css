@@ -1,0 +1,128 @@
+@media (max-width:1440px){
+.banner-text h3 {font-size:60px;}
+.right-box {padding:30px}
+.right-box h3 {font-size:26px; line-height:40px}
+.request-a-quote h4 {font-size:25px}
+}
+
+@media (max-width:1024px){
+.bg-css {padding:100px 0}
+.navbar-expand-sm .navbar-nav .nav-link {padding:30px 18px; color:#000;}
+.bg-css h2 {font-size:35px}
+.banner-text h3 {font-size:40px;} 
+.heading h2 {font-size:40px;}
+#carousel-1 .carousel-item {height:60vh}
+.navbar-expand-lg .navbar-nav .nav-link {padding-top: 20px;padding-bottom: 30px;padding-left:15px;padding-bottom: 20px;padding-right: 15px;}
+.banner-text h3 {font-size: 30px;}
+.navbar-shrink .nav-link img {margin-top:6px;}
+.top-css li {font-size:12px;} 
+.top-css li i {width:35px; height:35px; line-height:35px}
+.get-a-free-quote {font-size:12px; padding:10px 20px}
+.heading h2 {font-size:25px}
+.heading h2:before {width:40px}
+.heading h2 {margin-bottom:25px}
+.box {padding:45px 35px;}
+.icon-css h4 {font-size:15px}
+.about-us h3 {font-size:20px;}
+.icon-css-2 {width:50px; height:50px; line-height:45px;}
+.icon-css-2 {font-size:15px;}  
+.work-with-us {padding:60px 0} 
+.work-with-us {padding:60px 0} 
+.work-with-us h2 {font-size:25px;}
+.work-with-us a {font-size:18px}
+.work-with-us a:hover {font-size:18px;}
+.subscribe-us {padding:60px 0 50px 0}
+.customers-section {padding:60px 0 60px 0} 
+.our-blogs {padding:60px 0 60px 0}
+.projects-section {padding:40px 0 0 0}
+.about-us h3 {margin-top:10px}
+.about-us {padding:40px 0 0 0}
+.img-hover {padding:30% 0 0 0}
+.img-hover a {margin:0 4px}
+#carousel-1 .carousel-item {height:35vh}
+
+}
+
+@media (max-width:991px){
+body {padding: 67px 0 0 0;}
+.footer {position:relative}
+.box h4 {font-size:15px}
+.right-box h3 {font-size:18px} 
+.right-box h3 {margin-bottom:15px}
+.request-a-quote h3 {font-size:40px;}
+.right-img {padding:0 10px}
+.request-a-quote h4 {font-size:20px}
+.video .btn {width:70px; height:70px; line-height:70px;}
+.request-a-quote .form-control {font-size:15px; padding: 10px 15px;}
+.request-a-quote h5 {font-size:14px;}
+.request-a-quote .btn {font-size:17px;}
+.heading h2 {font-size:35px;}
+.text-css h3 {font-size:17px;}
+.text-css p {font-size:14px; line-height:24px;}
+.logo-desktop {display:none!important}
+.top-bg {display:none!important}
+.mx-auto2 {margin-top:50px; width:100%}
+.navbar-collapse {text-align:left!important;}
+.navbar-brand img {width:180px}
+.navbar-toggler {top:5px;}
+.navbar-light .navbar-nav .nav-link {font-size:14px;}
+.dropdown-item {padding:5px 15px; font-size:14px}
+.navbar-expand-lg .navbar-nav .nav-link {padding-top:5px; padding-bottom:5px; padding-left:0; padding-right:0;}
+.navbar-light .navbar-toggler {background:#f2bb00; border:0; float:right; margin-right:-20px;}
+.navbar {padding-bottom:0;}
+.top-css {display:none}
+.navbar-brand {padding-top:0;}
+.get-a-free-quote {display:none}
+body {padding: 55px 0 0 0;}
+.left-text {float:none; text-align:center;}
+.about-us h3 { font-size:18px}
+.about-us p { font-size:14px} 
+.navbar-toggler {right: 15px; top:0; margin-bottom:9px;} 
+}
+
+@media (max-width:767px){
+.request-a-quote .btn {margin-bottom:20px}
+.right-img {padding:0}
+.footer ul {margin-bottom:20px;}
+.sign-up h4 {margin-bottom:25px; margin:0 0 15px 0}
+.sign-up {padding:40px 0}
+.input-css {padding:14px 20px}
+.request-a-quote h3 {color:#002e5b}
+.input-css  {width:60%}
+.copyright {text-align:center}
+.copyright p {margin:0; padding:0}
+.social-media2 {float:none; margin-top:15px}
+.footer {padding:50px 0 0 0}
+.copyright {margin-top:20px;}
+.happy-customers {padding:50px 0}
+.recent-projects {padding:50px 0 0 0}
+.testimonails-box {padding:20px 20px}
+.testimonails-box p {font-size:15px; line-height:26px}
+.bg-css {padding:80px 0;}
+.bg-css h2 {font-size: 30px;line-height: 46px;}
+.top-bg {display:none}
+.request-a-quote h4 {margin-bottom:40px;}
+.get-a-free-quote {display:none}
+.social-media {display:none} 
+.heading h2 {font-size:30px;}
+.heading p {font-size:13px;}
+.about-us .text-right {text-align:center!important}
+.about-us .col-md-4 {text-align:center!important;}
+.customers-text p {margin-bottom:10px; text-align:center}
+.customers-text .mr-3 {margin:0 0 10px 0!important;}
+.home-newsletter .btn {padding:0 20px}
+body { font-size:15px; line-height:25px;}
+.box { padding:30px 15px}
+.about-us .img-fluid { margin-bottom:20px}
+}
+
+@media (max-width:480px){ 
+.rotate {transform: translateX(-35%) translateY(270%) rotate(-90deg); width:183px;}
+.carousel-caption {bottom:15%;}
+.banner-text h3 { font-size:30px}
+.carousel-control-prev, .carousel-control-next { display:none}
+.carousel-caption  { left:15px; right:15px}
+.heading h2 { font-size:24px;}
+.work-with-us h2 {font-size:20px}
+.banner-text p { display:none}
+}

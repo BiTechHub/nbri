@@ -1,0 +1,190 @@
+@media print{
+	body{-webkit-print-color-adjust:exact!important;width:100%!important}a:after{content:''!important}a[href]:after{content:none!important}@page{size:auto!important;margin:0mm!important}a{text-decoration:none!important}a:not(.btn){text-decoration:none!important}
+}
+@media print {
+/* Home Page (Start css) */
+	/* Top Header Section */
+	.top-header .col-md-12.left-sec{flex:0 0 47%;max-width:47%}
+	.top-header .col-md-12{flex:0 0 53%;max-width:53%}
+	.top-header ul li{padding:0 8px}
+	.top-header .left-sec ul li:first-child{padding-left:0}
+	/* Logo Section */
+	.topheader2 .logo-sec{flex:0 0 60%;max-width:60%}
+	.topheader2 .moblie_bg{flex:0 0 40%;max-width:40%}
+	.nav-wraper{padding:20px 0}
+	/* Main Manu Section */
+	.navbar{display:block}
+	.navbar-light .navbar-toggler{display:none}
+	.collapse{display:block}
+	.custom-menu #superfish-main-menu li a{padding:13px 7px}
+	ul.sf-menu .sf-sub-indicator{right:-4px}
+	.custom-menu #superfish-main-menu li ul li a{font-size:11px}
+	.custom-menu #superfish-main-menu li ul li .sf-sub-indicator{right:4px}
+	/* Whats New Section */
+	.view-homepage-banner .carousel-item p{margin:0}
+	.view-homepage-banner img{min-height:100%;height:auto}
+	/* Whats New Section */
+	.whatsnew_sec .slider-controls{width:15%}
+	.whatsnew_sec{padding:5px 0px}
+	/* About Us Section */
+	.about_boxsection{background:linear-gradient(290deg, #F9F9F9 77%, #ffffff, #ffffff);padding:50px 0 40px;overflow:hidden;margin:10px 0 0}
+	.about_bg{padding:0px 0px;Top:0}
+	.title2::before{top:38px}
+	.about_des2{padding-bottom:0px}
+	.about_boxsection .about_img_bg{flex:0 0 58.333333%;max-width:58.333333%}
+	
+	/* Leader Section */
+	.leader_section{margin-bottom:20px}
+	/* Service Section */
+	.service_section ul li::after{margin-left:160px}
+	.service_section ul li .title_service{margin:10px 0 0}
+	/* Laboratories & Centres Section */
+	.labor-seciton .col-lg-5{flex:0 0 38.666667%;max-width:38.666667%}
+	.labor-seciton .col-lg-4{flex:0 0 36.333333%;max-width:36.333333%}
+	.labor-seciton .col-lg-3{flex:0 0 25%;max-width:25%}
+	.blue-box{padding:30px 15px 30px 15px}
+	.map-div{margin:15px 0 0 -30px}
+	.map-div iframe{width:100%!important}
+	.service-box{margin:15px 0 0 -30px}
+	/* Circular & Notice and Photo Gallery Section */
+	.galler_box .col-md-6{flex:0 0 50%;max-width:50%}
+	/* Social Media Section */
+	.social-section .col-lg-4{flex:0 0 33.333333%;max-width:33.333333%}
+	/* Footer Section */
+	.footer-bottom-sec{position:initial}
+	.footer-bottom-sec .copyright-sec{flex:0 0 75%;max-width:75%}
+	.footer-bottom-sec .newsletter-sec{flex:0 0 25%;max-width:25%}
+/* Inner Pages (Start css) */
+	.inner_header{background-position:center center}
+	.inner_section .col-lg-9{flex:0 0 75%;max-width:75%}
+	.inner_section .col-lg-3{flex:0 0 25%;max-width:25%}
+	.innleft_section .menu{-webkit-box-shadow:1px 3px 21px -4px rgba(0, 0, 0, 0.18)!important;box-shadow:1px 3px 21px -4px rgba(0, 0, 0, 0.18)!important}
+	.innleft_section .menu li a{padding:10px 10px 10px 10px}
+	.innerheading{background-image:linear-gradient(to left, rgb(255 255 255), rgb(4 74 159 / 80%))}
+	.customdatatable th{background-color:#ff8529!important}
+	.table td p, .table th p{margin:0 0 8px}
+	.customdatatable .listing li{padding:0px 0px 5px 12px;margin-bottom:0px}
+	#webform-submission-online-query-feedback-add-form{box-shadow:0 0 15px 0px #00000017!important}
+	.sitemap{box-shadow:0 0 15px 0px #00000017!important}
+}
+
+
+@media print {
+    /* Page setup */
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    /* Reset screen effects */
+    * {
+      animation: none !important;
+      transition: none !important;
+      box-shadow: none !important;
+    }
+
+    body {
+      background: #fff !important;
+      color: #000 !important;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    /* Hide unwanted sections 
+    nav,
+    .navsection,
+    .top-header,
+    .searchSection,
+    .search-btn,
+    .dropdown,
+    .sf-menu,
+    .navbar,
+    .button,
+    .no-print,
+    .sticky {
+      display: none !important;
+    }*/
+
+    /* Header layout fix */
+    header,
+    .topheader2 {
+      background: none !important;
+    }
+
+    /* Logo size control */
+    .logo-sec img,
+    .image_shani {
+      max-width: 90px !important;
+      height: auto !important;
+    }
+
+    /* Institute name */
+    #pp2 {
+      font-size: 16px !important;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #pp2 span {
+      font-size: 12px !important;
+      display: block;
+    }
+
+    #pp3 {
+      font-size: 11px !important;
+      text-align: center;
+    }
+
+    #pp1 p {
+      font-size: 10px !important;
+      text-align: center;
+    }
+
+    /* Remove fixed / sticky issue */
+    .sticky {
+      position: static !important;
+    }
+
+    /* Table print friendly */
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+    }
+
+    table, th, td {
+      border: 1px solid #000 !important;
+    }
+
+    th, td {
+      padding: 6px !important;
+      font-size: 11px !important;
+    }
+
+    /* Images scale properly */
+    img {
+      max-width: 100% !important;
+      page-break-inside: avoid;
+    }
+
+    /* Avoid cut issues */
+    h1, h2, h3, h4, h5, p {
+      page-break-after: avoid;
+    }
+
+    /* Links plain */
+    a {
+      text-decoration: none !important;
+    }
+
+    .col-2 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 16.666667%;
+      flex: 0 0 16.666667%;
+      max-width: 16.666667% !important;
+  }
+
+  .shani_shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+	}
+    
+  }

@@ -1,0 +1,135 @@
+@media (max-width:1440px){
+.banner-text h3 {font-size:60px;}
+.right-box { padding:30px}
+.right-box h3 { font-size:26px; line-height:40px}
+.request-a-quote h4 { font-size:25px}
+}
+
+ 
+@media (max-width:1024px){
+.bg-css {padding:100px 0}
+.navbar-expand-sm .navbar-nav .nav-link {padding:30px 18px; color:#000;}
+.bg-css h2 { font-size:35px}
+.banner-text h3 { font-size:40px;} 
+.banner-text p { font-size:14px;}
+.heading h2 { font-size:40px;}
+#carousel-1 .carousel-item {height:60vh}
+.testimonails-box {padding:40px 20px}
+.testimonails-box p { font-size:17px; line-height:28px;}
+.testimonails-box h4 { font-size:18px}
+.img-text { left:0; padding:0 15px}
+.img-text h4 { font-size:25px;}
+.img-text {bottom:15px}
+.logo2 {padding:35px 0}
+.input-css {width:66%; font-size:16px}
+.sign-up .btn-info { font-size:16px; padding-left:15px; padding-right:15px;}
+.sign-up h4 { font-size:20px;}
+.sign-up { padding:50px 0}
+
+.navbar-expand-lg .navbar-nav .nav-link {padding-top: 20px;padding-bottom: 30px;padding-left:15px;padding-bottom: 20px;padding-right: 15px;}
+
+.banner-text h3 {font-size: 30px;}
+.navbar-shrink .nav-link img {margin-top:6px;}
+.sign-up {padding: 30px 0;}
+
+}
+
+@media (max-width:991px){
+.box h4 { font-size:15px}
+.right-box h3 { font-size:18px} 
+.right-box h3 { margin-bottom:15px}
+.request-a-quote h3 { font-size:40px;}
+.right-img { padding:0 10px}
+.request-a-quote h4 { font-size:20px}
+
+.video .btn { width:70px; height:70px; line-height:70px;}
+.request-a-quote .form-control { font-size:15px; padding: 10px 15px;}
+.request-a-quote h5 { font-size:14px;}
+.request-a-quote .btn { font-size:17px;}
+.heading h2 { font-size:35px;}
+.text-css h3 {font-size:17px;}
+.text-css p { font-size:14px; line-height:24px;}
+.logo-desktop { display:none!important}
+.navbar-brand {position:absolute;top:0;}
+.top-bg { display:none!important}
+
+.mx-auto2 { margin-top:50px; width:100%}
+.navbar-collapse {text-align:left!important;}
+.navbar-brand img { width:180px}
+.navbar-toggler {position:absolute;right:0;top:5px;}
+.navbar-brand { padding:0}
+.navbar-light .navbar-nav .nav-link {font-size:14px;}
+.dropdown-item {padding:5px 15px; font-size:14px}
+body {padding: 67px 0 0 0;}
+.navbar-expand-lg .navbar-nav .nav-link {padding-top:5px; padding-bottom:5px; padding-left:0; padding-right:0;}
+.navbar-light .navbar-toggler { background:#f2bb00; border:0; margin-right:15px}
+.sp-mobile { padding-bottom:15px}
+.navbar-brand img {margin-top:6px;}
+
+}
+
+
+@media (max-width:767px){
+.request-a-quote { background:linear-gradient(to right, #fff 50%, #fff 50%)}
+.request-a-quote .btn { margin-bottom:20px}
+.right-img { padding:0}
+.footer ul { margin-bottom:20px;}
+.sign-up h4 { margin-bottom:25px; margin:0 0 15px 0}
+.sign-up {padding:40px 0}
+.input-css { padding:14px 20px}
+.request-a-quote h3 {color:#002e5b}
+.input-css  {width:60%}
+.copyright { text-align:center}
+.copyright p { margin:0; padding:0}
+.social-media2 { float:none; margin-top:15px}
+.footer {padding:50px 0 0 0}
+.copyright {margin-top:20px;}
+.happy-customers {padding:50px 0}
+.recent-projects { padding:50px 0 0 0}
+.testimonails-box {padding:20px 20px}
+.testimonails-box p { font-size:15px; line-height:26px}
+.bg-css {padding:80px 0;}
+.bg-css h2 {font-size: 30px;line-height: 46px;}
+.top-bg { display:none}
+.request-a-quote {padding:50px 0 20px 0}
+.request-a-quote h4 {margin-bottom:40px;}
+.get-a-free-quote { display:none}
+.social-media { display:none} 
+.right-box h3 { line-height:inherit}
+.right-box h3 { font-size:15px}
+.right-box { padding:20px} 
+.right-box a { font-size:13px}
+.heading h2 { font-size:30px;}
+.heading p { font-size:13px;}
+.testimonails-box p { font-size:13px;}
+.testimonails-box h4 { font-size:14px;}
+.testimonails-box h4 span { font-size:11px;}
+.owl-theme .owl-nav [class*=owl-] {line-height:33px;}
+.request-a-quote h3 { font-size:25px}
+.request-a-quote .heading p { color:#000!important}
+.slider-section {margin-bottom:25px;}
+.request-a-quote .col-md-11 { padding:0}
+}
+
+
+@media (max-width:480px){ 
+.rotate {
+transform: translateX(-35%) translateY(270%) rotate(-90deg); width:183px;}
+.banner-text h3 {font-size:20px;}
+.bg-css h2 { font-size:25px; line-height:25px;}
+
+}
+
+
+@media (max-width:360px){
+#carousel-1 .carousel-item {height:100vh}
+body { padding:0}
+.phone-n { display:none}
+.input-css {width: 57%;}
+}
+
+
+
+ 
+
+

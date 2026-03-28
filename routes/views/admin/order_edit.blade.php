@@ -1,0 +1,140 @@
+@extends('admin.layouts.master')
+@section('main-section')
+<div class="content-wrapper">
+	  <div class="container">
+		<!-- Content Header (Page header) -->
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">Edit Orders</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="{{url('/')}}"><i class="mdi mdi-home-outline"></i></a></li>
+                              <li class="breadcrumb-item" aria-current="page"><a class="text-info" href="{{url('/')}}/admin-panel/office_orders_list">Orders List</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Edit Order</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Main content -->
+		<section class="content">
+
+		 <!-- Basic Forms -->
+		  <div class="box">
+
+			<!-- /.box-header -->
+			<div class="box-body">
+			  <div class="row">
+				<div class="col">
+					<form action="{{ route('admin-panel.ordersedit') }}" method="post" enctype="multipart/form-data">
+                    @if(session('status'))
+                       <div class="alert alert-success">
+                           {{ session('status') }}
+                       </div>
+                     @endif
+					 @if(session('success'))
+                       <div class="alert alert-success">
+                           {{ session('success') }}
+                       </div>
+                     @endif
+					 @if(session('fail'))
+                       <div class="alert alert-success">
+                           {{ session('fail') }}
+                       </div>
+                     @endif
+                        @csrf
+						<input type="hidden" name="id" value="{{$order->id}}">
+					  <div class="row">
+						<div class="col-md-6">
+                          <div class="form-group">
+								<h5>Order No.<span class="text-danger">*</span></h5>
+								<div class="controls">
+									<input type="text" name="order_no" class="form-control" value="{{$order->order_no}}"> 
+								</div>
+								@error('order_no') <div class="alert alert-danger mt-1 mb-1"> {{ $message }}</div> @enderror
+
+							</div>
+                          	</div>
+							<div class="col-md-6">
+							<div class="form-group">
+								<h5>Category</h5>
+								<div class="controls">
+                                  <select name="category" class="form-control">
+                                    <option selected value="0">--Please Select--</option>
+                                  </select> 
+								</div>
+							</div>
+                              </div>
+							<div class="col-md-12">
+							 <div class="form-group">
+								<h5>Subject <span class="text-danger">*</span></h5>
+								<div class="controls">
+									<input type="text" name="subject" class="form-control" value="{{$order->subject}}"> </div>
+							</div>
+							@error('subject') <div class="alert alert-danger mt-1 mb-1"> {{ $message }}</div> @enderror
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+								<h5>Order Date <span class="text-danger">*</span></h5>
+								<div class="controls">
+									<input type="date" name="order_date" class="form-control" value="{{$order->order_date}}"> </div>
+							</div>
+							@error('order_date') <div class="alert alert-danger mt-1 mb-1"> {{ $message }}</div> @enderror
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+								<h5>Select file <span class="text-danger">*</span></h5>
+								<div class="controls">
+									<input type="file" name="file" class="form-control"> </div>
+							        @error('file')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+					  	</div>
+						<div class="text-xs-right">
+							<button type="submit" class="btn btn-info">Update Order</button>
+						</div>
+					</form>
+
+				</div>
+				<!-- /.col -->
+			  </div>
+			  <!-- /.row -->
+			</div>
+			<!-- /.box-body -->
+		  </div>
+		  <!-- /.box -->
+
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+
+  @endsection
+@section('script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+ <script type="text/javascript">
+
+ $('.delete').on('click', function (event) {
+    event.preventDefault();
+    const url = $(this).attr('href');
+    swal({
+        title: 'Are you sure?',
+        text: 'This record and it`s details will be permanantly deleted!',
+        icon: 'warning',
+        buttons: ["Cancel", "Yes!"],
+    }).then(function(value) {
+        if (value) {
+            window.location.href = url;
+        }
+    });
+});
+
+ </script>
+@endsection
